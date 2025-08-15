@@ -1,0 +1,30 @@
+📊 Resumen del Código: Regresión Lineal Múltiple y Visualización de Resultados
+Este script realiza un análisis de regresión lineal múltiple utilizando datos industriales almacenados en un archivo CSV (wic318_.csv). El objetivo es modelar la variable dependiente WIT318 en función de varias variables independientes relacionadas con sensores y condiciones operativas.
+
+🧮 Pasos principales del código:
+Carga de datos: Se importa el archivo CSV con pandas.
+
+Modelado estadístico: Se ajusta un modelo de regresión lineal múltiple con statsmodels, usando como fórmula:
+
+python
+WIT318 ~ FE005 + FE006 + FE007 + FE008 + SIT312B2 + LIT447 + CV002MO1 + CV001MO1I
+Evaluación del modelo: Se imprime el resumen estadístico del modelo (R², p-valores, coeficientes, etc.).
+
+Predicción: Se generan valores aproximados (Predicted) de WIT318 usando el modelo ajustado.
+
+Visualización de significancia:
+
+Se extraen los coeficientes y p-valores.
+
+Se crea un gráfico de barras donde el color indica la significancia estadística (más intenso = más significativo).
+
+Comparación de señales:
+
+Se grafican la señal real (WIT318) y la señal aproximada (Predicted) a lo largo del tiempo (Timestamp) para evaluar el desempeño del modelo.
+
+📈 Resultados esperados:
+Identificación de variables con mayor influencia sobre WIT318.
+
+Evaluación visual de la calidad del ajuste del modelo.
+
+Herramienta útil para diagnóstico de procesos y análisis predictivo en entornos industriales
